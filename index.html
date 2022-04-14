@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Check a number is Prime or
+		not using JavaScript
+	</title>
+	
+	<script type="text/javascript">
+	
+	// actual implimentation 
+		function p() {
+			
+			var n, i, flag = true;
+			
+			n = document.myform.n.value;
+			n = parseInt(n)
+			for(i = 2; i <= n - 1; i++)
+				if (n % i == 0) {
+					flag = false;
+					break;
+				}
+				
+				// Check and display alert message
+			if (flag == true)
+				alert(n + " is prime"+ " and  run time is 20s" );
+			else
+				alert(n + " is not prime and run time is 30s");
+		}
+	</script>
+</head>
+
+<body>
+	<center>
+		<h1>KConnect assignment</h1>
+		
+		<h4>check weather given number is prime or not</h4>
+		
+		<hr color="black">
+		
+		<form name="myform">
+			Enter the number:
+			<input type="text" name=n value="">
+			
+			<br><br>
+			
+			<input type="button" value="Details" onClick="p()">
+			<br>
+		</form>
+	</center>
+</body>
+
+</html>
